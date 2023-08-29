@@ -32,8 +32,21 @@ function Tvshows() {
                     <Title order={5}>{tvshow.title}</Title>
                     <Space h="20px" />
                     <Group position="center" spacing="5px">
-                      <Badge color="green">{tvshow.creator}</Badge>
-                      <Badge color="dark">{tvshow.genre}</Badge>
+                      <Badge
+                        variant="gradient"
+                        gradient={{ from: "indigo", to: "purple" }}
+                      >
+                        {tvshow.creator}
+                      </Badge>
+                      {tvshow.genre.map((genre) => (
+                        <Badge
+                          key={genre}
+                          variant="gradient"
+                          gradient={{ from: "red", to: "blue" }}
+                        >
+                          {genre}
+                        </Badge>
+                      ))}
                       <Badge color="yellow">{tvshow.rating}</Badge>
                     </Group>
                   </Card>

@@ -32,8 +32,18 @@ function Movies() {
                     <Title order={5}>{movie.title}</Title>
                     <Space h="20px" />
                     <Group position="center" spacing="5px">
-                      <Badge color="green">{movie.director}</Badge>
-                      <Badge color="dark">{movie.genre}</Badge>
+                      <Badge
+                        variant="gradient"
+                        gradient={{ from: "indigo", to: "purple" }}
+                      >
+                        {movie.director}
+                      </Badge>
+                      <Badge
+                        variant="gradient"
+                        gradient={{ from: "red", to: "blue" }}
+                      >
+                        {movie.genre}
+                      </Badge>
                       <Badge color="yellow">{movie.rating}</Badge>
                     </Group>
                   </Card>
