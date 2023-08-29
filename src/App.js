@@ -1,11 +1,28 @@
-import { Container, Title } from "@mantine/core";
+import { Container, Title, Space, Divider } from "@mantine/core";
+
+import Movies from "./Movies";
+import Tvshows from "./Tvshows";
 
 function App() {
   return (
     <Container>
-      <Title align="center">Netflix</Title>
-      <h2>Enjoy big movies, hit series and more from RM17.</h2>
+      <Space h="50px" />
+      <Title align="center" color="red">
+        Netflix
+      </Title>
+      <Space h="20px" />
+      <Title order={2} align="center">
+        Enjoy big movies, hit series and more from RM17.
+      </Title>
+      <Space h="30px" />
+      <Divider />
+      <Space h="30px" />
       {/* list all the movies here */}
+      <Movies />
+      <Space h="30px" />
+      <Divider />
+      <Space h="30px" />
+      <Tvshows />
     </Container>
   );
 }
